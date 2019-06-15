@@ -1,0 +1,23 @@
+
+<input type="text" placeholder="Search Vehicles" class="form-control" ng-model="VehicleVm.searchText">
+<br/>
+<table class="table table-striped ">
+  <thead class="table-dark">
+    <tr>
+      <th>Vin</th>
+      <th>Make</th>
+        <th ng-click="VehicleVm.sorter.sortBy='model'; VehicleVm.sorter.sortOrder=!VehicleVm.sorter.sortOrder;">Model</th>
+      <th ng-click="VehicleVm.sorter.sortBy='year'; VehicleVm.sorter.sortOrder=!VehicleVm.sorter.sortOrder;">Year</th>
+      <th ng-click="VehicleVm.sorter.sortBy='lastServiceDate'; VehicleVm.sorter.sortOrder=!VehicleVm.sorter.sortOrder;">Last Service Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in VehicleVm.cars | filter: VehicleVm.searchText| orderBy:VehicleVm.sorter.sortBy:VehicleVm.sorter.sortOrder ">
+      <td><a href='#!/vehicles/{{car.vin}}'>{{car.vin}}</a></td>
+      <td>{{car.make}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.year}}</td>
+      <td>{{car.lastServiceDate | date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,18 @@
+
+<h3>High Alerts in Past 2 hours </h3>
+<table class="table striped">
+  <thead class='thead-dark'>
+    <tr>
+      <th>Vin</th>
+      <th>Priority </th>
+      <th ng-click="AlertsVm.sorter.sortBy='count'; AlertsVm.sorter.sortOrder=!AlertsVm.sorter.sortOrder;" >Number of Alerts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat ="Alert in AlertsVm.alertswithkey | orderBy:AlertsVm.sorter.sortBy:AlertsVm.sorter.sortOrder  ">
+      <td><a href="#!/vehicles/{{Alert[0]}}">{{Alert.vin}}</a></td>
+      <td>{{Alert.priority}}</td>
+      <td align="center">{{Alert.count}}</td>
+    </tr>
+  </tbody>
+</table>

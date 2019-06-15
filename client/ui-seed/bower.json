@@ -1,0 +1,15 @@
+{
+  "name": "ui-seed",
+  "description": "to understand npm bower gulp",
+  "authors": [
+    "Arif lakhani"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^4.3.1",
+    "angular-route": "^1.6.4"
+  }
+}

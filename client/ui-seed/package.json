@@ -1,0 +1,17 @@
+{
+  "name": "ui-seed",
+  "version": "1.0.0",
+  "description": "to understand npm bower gulp ",
+  "author": "Arif lakhani",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-inject": "^4.0.0",
+    "main-bower-files": "^2.13.1"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4"
+  }
+}
