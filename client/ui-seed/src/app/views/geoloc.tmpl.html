@@ -1,0 +1,14 @@
+<div ng-controller="GeoController as GeoVm"></div>
+<form ng-submit="OnGeoClick(vin)" novalidate>
+  <div class="form-group">
+    <label>Vin Number</label>
+    <input type="text" class="form-control" ng-model="vin" id="vin" placeholder="Enter vin">
+  </div>
+  <p></p>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr>
+
+    <div>
+        <div id="map" style="width: 500px; height: 400px;"></div>
+    </div>

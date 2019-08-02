@@ -1,0 +1,29 @@
+<div ng-controller="VehicleHistoryController as HistoryVm"></div>
+<form ng-submit="OnClick()" novalidate>
+  <div class="form-group">
+    <label>Vin Number</label>
+    <input type="text" class="form-control" ng-model="HistoryVm.vin" id="vin" placeholder="Enter vin">
+  </div>
+  <p></p>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Alert Priority</th>
+      <th>Message</th>
+      <th>Alert Time Stamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="alert in HistoryVm.alerts | orderBy : alert.timestamp : true">
+      <td>{{alert.id}}</td>
+      <td>{{alert.priority}}</td>
+      <td>{{alert.msg}}</td>
+      <td>{{alert.timestamp| date:'yyyy-MM-dd HH:mm:ss Z'}}</td>
+    </tr>
+
+  </tbody-->
+</table>

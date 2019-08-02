@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app='myModule'>
+
+<head>
+  <meta charset="utf-8" />
+  <title> AngularJs Plukner</title>
+
+  <!--bower:css-->
+  <!--endinject-->
+
+  <!--vendor:css-->
+  <!--endinject-->
+
+  <!--app:css-->
+  <!--endinject-->
+
+<!-- inject:css -->
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- endinject -->
+</head>
+
+<body>
+
+  <div class="container">
+    <header>
+      Car Tracker
+    </header>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link " href="#!/vehicles">Vehicle-List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/highAlerts">High-Alerts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/plotsignals">Plot-Signals</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/geolocation">Geo-Location</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#!/histroy">Historical-Alerts</a>
+      </li>
+    </ul>
+    <div ng-view></div>
+
+    <footer>
+      Fancy Text Here.
+    </footer>
+  </div>
+  <div></div>
+  <!--inject:js-->
+  <script src="app/app.js"></script>
+  <script src="app/services/vehicles.service.js"></script>
+  <script src="app/controllers/geoloc.Controller.js"></script>
+  <script src="app/controllers/history.controller.js"></script>
+  <script src="app/controllers/signalplot.controller.js"></script>
+  <script src="app/controllers/vehicleAlerts.controller.js"></script>
+  <script src="app/controllers/vehicles.controller.js"></script>
+  <script src="app/controllers/vehiclesDetail.controller.js"></script>
+  <!--endinject-->
+
+  <!--vendor:js-->
+  <!--endinject-->
+
+  <!--app:js-->
+  <!--endinject-->
+
+  <!--bower:js-->
+  <!--endinject-->
+<script  src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+  <script src="http://cdn.zingchart.com/zingchart.min.js"></script>
+  <script src="http://cdn.zingchart.com/angular/zingchart-angularjs.js"></script>
+</body>
+
+</html>
